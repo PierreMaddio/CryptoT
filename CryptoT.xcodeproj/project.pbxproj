@@ -14,6 +14,7 @@
 		FA21FED128C2010B000E4FF5 /* CryptoTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FED028C2010B000E4FF5 /* CryptoTTests.swift */; };
 		FA21FEDB28C2010B000E4FF5 /* CryptoTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FEDA28C2010B000E4FF5 /* CryptoTUITests.swift */; };
 		FA21FEDD28C2010B000E4FF5 /* CryptoTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FEDC28C2010B000E4FF5 /* CryptoTUITestsLaunchTests.swift */; };
+		FA21FEEB28C25A57000E4FF5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FEEA28C25A57000E4FF5 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FA21FED628C2010B000E4FF5 /* CryptoTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA21FEDA28C2010B000E4FF5 /* CryptoTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTUITests.swift; sourceTree = "<group>"; };
 		FA21FEDC28C2010B000E4FF5 /* CryptoTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA21FEEA28C25A57000E4FF5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		FA21FEBE28C20107000E4FF5 /* CryptoT */ = {
 			isa = PBXGroup;
 			children = (
+				FA21FEE928C25A32000E4FF5 /* Extensions */,
 				FA21FEBF28C20107000E4FF5 /* CryptoTApp.swift */,
 				FA21FEC128C20107000E4FF5 /* ContentView.swift */,
 				FA21FEC328C2010B000E4FF5 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				FA21FEDC28C2010B000E4FF5 /* CryptoTUITestsLaunchTests.swift */,
 			);
 			path = CryptoTUITests;
+			sourceTree = "<group>";
+		};
+		FA21FEE928C25A32000E4FF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA21FEEA28C25A57000E4FF5 /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			files = (
 				FA21FEC228C20107000E4FF5 /* ContentView.swift in Sources */,
 				FA21FEC028C20107000E4FF5 /* CryptoTApp.swift in Sources */,
+				FA21FEEB28C25A57000E4FF5 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +435,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,6 +465,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
