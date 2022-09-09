@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct CryptoTApp: App {
+    // anything in the HomeView as access to the HomeViewModel
+    @StateObject private var vm = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 HomeView()
                     .navigationBarHidden(true)
             }
+            .environmentObject(vm)
         }
     }
 }
