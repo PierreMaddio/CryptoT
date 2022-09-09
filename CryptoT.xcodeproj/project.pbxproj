@@ -20,6 +20,8 @@
 		FAFD90E328CB41410061357F /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90E228CB41410061357F /* CircleButtonAnimationView.swift */; };
 		FAFD90E528CB860A0061357F /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90E428CB860A0061357F /* CoinRowView.swift */; };
 		FAFD90E828CB86670061357F /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90E728CB86670061357F /* Coin.swift */; };
+		FAFD90EA28CB8D6B0061357F /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90E928CB8D6B0061357F /* PreviewProvider.swift */; };
+		FAFD90EC28CB94E50061357F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90EB28CB94E50061357F /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		FAFD90E228CB41410061357F /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		FAFD90E428CB860A0061357F /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		FAFD90E728CB86670061357F /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		FAFD90E928CB8D6B0061357F /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		FAFD90EB28CB94E50061357F /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				FA21FEEA28C25A57000E4FF5 /* Color.swift */,
+				FAFD90E928CB8D6B0061357F /* PreviewProvider.swift */,
+				FAFD90EB28CB94E50061357F /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,6 +352,8 @@
 				FA21FEEB28C25A57000E4FF5 /* Color.swift in Sources */,
 				FAFD90E528CB860A0061357F /* CoinRowView.swift in Sources */,
 				FAFD90E828CB86670061357F /* Coin.swift in Sources */,
+				FAFD90EA28CB8D6B0061357F /* PreviewProvider.swift in Sources */,
+				FAFD90EC28CB94E50061357F /* Double.swift in Sources */,
 				FAFD90E328CB41410061357F /* CircleButtonAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
