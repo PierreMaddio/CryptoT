@@ -6,18 +6,29 @@
 //
 
 import Foundation
+import Combine
 
 // ObservableObject: observed it from our view
+// Our view has a reference to this HomeViewModel, this viewModel has a dataService witch initialise a CoinDataService(init getCoins), this getCoins func go to the url, download the data, check is it is valid data, decode that data and then take that data and append to allCoins array.Because allCoins is @Published, in HomeViewModel(init addSubscribers), func addSubscribers subscribing that $allCoins array(Published variable), then append to our allCoins array of HomeViewModel(same name)
 class HomeViewModel: ObservableObject {
     
     @Published var allCoins: [Coin] = []
     @Published var portfolioCoins: [Coin] = []
     
+    private let dataService = CoinDataService()
+    private var cancellables = Set<AnyCancellable>()
+    
     init() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.allCoins.append(DeveloperPreview.instance.coin)
-            self.portfolioCoins.append(DeveloperPreview.instance.coin)
-        }
+        addSubscribers()
+    }
+    
+    func addSubscribers() {
+        // $allCoins is the publisher from CoinDataService
+        dataService.$allCoins
+            .sink { [weak self] (returnedCoins) in
+                self?.allCoins = returnedCoins
+            }
+            .store(in: &cancellables)
     }
     
 }
