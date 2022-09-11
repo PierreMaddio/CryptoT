@@ -24,6 +24,7 @@
 		FAFD90EC28CB94E50061357F /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90EB28CB94E50061357F /* Double.swift */; };
 		FAFD90EE28CB988E0061357F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90ED28CB988E0061357F /* HomeViewModel.swift */; };
 		FAFD90F128CC83360061357F /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90F028CC83360061357F /* CoinDataService.swift */; };
+		FAFD914828CDCADB0061357F /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD914728CDCADB0061357F /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		FAFD90EB28CB94E50061357F /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		FAFD90ED28CB988E0061357F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FAFD90F028CC83360061357F /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		FAFD914728CDCADB0061357F /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		FA21FEBE28C20107000E4FF5 /* CryptoT */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD914628CDCA6E0061357F /* Utilities */,
 				FA21FEBF28C20107000E4FF5 /* CryptoTApp.swift */,
 				FA21FEE928C25A32000E4FF5 /* Extensions */,
 				FAFD90EF28CC82D00061357F /* Services */,
@@ -227,6 +230,14 @@
 				FAFD90F028CC83360061357F /* CoinDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FAFD914628CDCA6E0061357F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD914728CDCADB0061357F /* NetworkingManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +378,7 @@
 				FAFD90E128CB2E080061357F /* CircleButtonView.swift in Sources */,
 				FA21FEEB28C25A57000E4FF5 /* Color.swift in Sources */,
 				FAFD90E528CB860A0061357F /* CoinRowView.swift in Sources */,
+				FAFD914828CDCADB0061357F /* NetworkingManager.swift in Sources */,
 				FAFD90E828CB86670061357F /* Coin.swift in Sources */,
 				FAFD90EA28CB8D6B0061357F /* PreviewProvider.swift in Sources */,
 				FAFD90EC28CB94E50061357F /* Double.swift in Sources */,
