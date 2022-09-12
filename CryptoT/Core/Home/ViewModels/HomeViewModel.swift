@@ -16,6 +16,7 @@ class HomeViewModel: ObservableObject {
     
     @Published var allCoins: [Coin] = []
     @Published var portfolioCoins: [Coin] = []
+    @Published var searchText: String = ""
     
     // dataService initialize CoinDataService(), with init() get the coin utomatically
     private let dataService = CoinDataService()
