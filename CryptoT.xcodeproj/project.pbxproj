@@ -18,6 +18,8 @@
 		FAFB5C5A28D06A4100E6618E /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB5C5928D06A4100E6618E /* Statistic.swift */; };
 		FAFB5C5C28D06BEB00E6618E /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB5C5B28D06BEB00E6618E /* StatisticView.swift */; };
 		FAFB5C5E28D070C400E6618E /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB5C5D28D070C400E6618E /* HomeStatsView.swift */; };
+		FAFB5C6028D078DE00E6618E /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB5C5F28D078DE00E6618E /* MarketData.swift */; };
+		FAFB5C6228D07EC800E6618E /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB5C6128D07EC800E6618E /* MarketDataService.swift */; };
 		FAFD90DD28CB2BF00061357F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90DC28CB2BF00061357F /* HomeView.swift */; };
 		FAFD90E128CB2E080061357F /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90E028CB2E080061357F /* CircleButtonView.swift */; };
 		FAFD90E328CB41410061357F /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD90E228CB41410061357F /* CircleButtonAnimationView.swift */; };
@@ -68,6 +70,8 @@
 		FAFB5C5928D06A4100E6618E /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		FAFB5C5B28D06BEB00E6618E /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		FAFB5C5D28D070C400E6618E /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		FAFB5C5F28D078DE00E6618E /* MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
+		FAFB5C6128D07EC800E6618E /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		FAFD90DC28CB2BF00061357F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FAFD90E028CB2E080061357F /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		FAFD90E228CB41410061357F /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			children = (
 				FAFD90E728CB86670061357F /* Coin.swift */,
 				FAFB5C5928D06A4100E6618E /* Statistic.swift */,
+				FAFB5C5F28D078DE00E6618E /* MarketData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			children = (
 				FAFD90F028CC83360061357F /* CoinDataService.swift */,
 				FAFD914C28CE12B00061357F /* CoinImageService.swift */,
+				FAFB5C6128D07EC800E6618E /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -408,6 +414,7 @@
 				FAFD90F128CC83360061357F /* CoinDataService.swift in Sources */,
 				FA21FEC228C20107000E4FF5 /* ContentView.swift in Sources */,
 				FAFD90EE28CB988E0061357F /* HomeViewModel.swift in Sources */,
+				FAFB5C6028D078DE00E6618E /* MarketData.swift in Sources */,
 				FAFD90DD28CB2BF00061357F /* HomeView.swift in Sources */,
 				FAFD915A28CF62D50061357F /* LocalFileManager.swift in Sources */,
 				FA21FEC028C20107000E4FF5 /* CryptoTApp.swift in Sources */,
@@ -421,6 +428,7 @@
 				FAFD914828CDCADB0061357F /* NetworkingManager.swift in Sources */,
 				FAFD90E828CB86670061357F /* Coin.swift in Sources */,
 				FAFB5C5E28D070C400E6618E /* HomeStatsView.swift in Sources */,
+				FAFB5C6228D07EC800E6618E /* MarketDataService.swift in Sources */,
 				FAFD914F28CE15080061357F /* CoinImageViewModel.swift in Sources */,
 				FAFD90EA28CB8D6B0061357F /* PreviewProvider.swift in Sources */,
 				FAFD90EC28CB94E50061357F /* Double.swift in Sources */,
