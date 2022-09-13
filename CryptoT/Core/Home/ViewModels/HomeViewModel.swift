@@ -25,6 +25,7 @@ class HomeViewModel: ObservableObject {
     // dataService initialize CoinDataService(), with init() get the coin utomatically
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
+    private let portfolioDataService = PortfolioDataService()
     private var cancellables = Set<AnyCancellable>()
     
     init() {
