@@ -44,15 +44,36 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
+        // updates marketData
         marketDataService.$marketData
             .map(markGlobalMarketData)
             .sink { [weak self] (returnedStats) in
                 self?.statistics = returnedStats
             }
             .store(in: &cancellables)
+        
+        // updates portfolio
+        $allCoins
+            .combineLatest(portfolioDataService.$savedEntities)
+            .map { (coinModels, portfolioEntities) -> [Coin] in
+                coinModels
+                    .compactMap { (coin) -> Coin? in
+                        guard let entity = portfolioEntities.first(where: { $0.coinID == coin.id }) else {
+                            return nil
+                        }
+                        return coin.updateHoldings(amount: entity.amount)
+                    }
+            }
+            .sink { [weak self] (returnedCoins) in
+                self?.portfolioCoins = returnedCoins
+            }
+            .store(in: &cancellables)
     }
     
-    // updates marketData
+    func updatePortfolio(coin: Coin, amount: Double) {
+        portfolioDataService.updatePortfolio(coin: coin, amount: amount)
+    }
+    
     private func filterCoins(text: String, coins: [Coin]) -> [Coin] {
         guard !text.isEmpty else {
             return coins
@@ -64,6 +85,7 @@ class HomeViewModel: ObservableObject {
             return coin.name.lowercased().contains(lowercasedText) || coin.symbol.lowercased().contains(lowercasedText) || coin.id.lowercased().contains(lowercasedText)
         }
     }
+    
     
     private func markGlobalMarketData(marketDataModel: MarketData?) -> [Statistic] {
         var stats: [Statistic] = []
