@@ -26,6 +26,7 @@ class CoinImageService {
     }
     
     private func getCoinImage() {
+        // green code image cash
         if let savedImage = fileManager.getImage(imageName: imageName, folderName: folderName) {
             image = savedImage
             //print("Retrieved image from file Manager!")
