@@ -17,10 +17,10 @@ class MarketDataService {
         getData()
     }
     
-    private func getData() {
+    func getData() {
         // api coingecko: coins, coins/markets: usd, market_cap_desc, 250 results, 1, sparkline(true), 24h price change)
         guard let url = URL(string: "https://api.coingecko.com/api/v3/global"
-) else { return }
+        ) else { return }
         
         marketDataSubscription = NetworkingManager.download(url: url)
             .decode(type: GlobalData.self, decoder: JSONDecoder())
