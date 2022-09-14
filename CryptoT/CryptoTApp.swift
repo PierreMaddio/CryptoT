@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CryptoTApp: App {
-    // anything in the HomeView as access to the HomeViewModel
+    // anything in the HomeView has access to the HomeViewModel
     @StateObject private var vm = HomeViewModel()
     
     init() {

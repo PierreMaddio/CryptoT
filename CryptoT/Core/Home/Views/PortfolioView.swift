@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PortfolioView: View {
-    
     @EnvironmentObject private var vm: HomeViewModel
     @State private var selectedCoin: Coin? = nil
     @State private var quantityText: String = ""
@@ -54,7 +53,6 @@ struct PortfolioView_Previews: PreviewProvider {
 }
 
 extension PortfolioView {
-    
     private var coinLogoList: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 10) {
@@ -137,16 +135,15 @@ extension PortfolioView {
             .opacity(
                 (selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText)) ? 1.0 : 0.0
             )
-
+            
             
         }
         .font(.headline)
     }
     
     private func saveButtonPressed() {
-        
         guard let coin = selectedCoin,
-        let amount = Double(quantityText)
+              let amount = Double(quantityText)
         else { return }
         
         // save to portfolio
@@ -173,5 +170,4 @@ extension PortfolioView {
         selectedCoin = nil
         vm.searchText = ""
     }
-    
 }

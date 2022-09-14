@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-
 /*
  ObservableObject: observed it from our view
  Our view has a reference to this HomeViewModel, this viewModel has a dataService witch initialise a CoinDataService(init getCoins), this getCoins func go to the url, download the data, check if it is valid data, decode that data and then take that data and append to allCoins array.Because allCoins is @Published, in HomeViewModel(init addSubscribers), func addSubscribers subscribing that $allCoins array(Published variable), then append to our allCoins array of HomeViewModel(same name allCoins)
@@ -92,7 +91,6 @@ class HomeViewModel: ObservableObject {
         guard !text.isEmpty else {
             return coins
         }
-        
         let lowercasedText = text.lowercased()
         
         return coins.filter { (coin) -> Bool in
@@ -104,36 +102,36 @@ class HomeViewModel: ObservableObject {
     private func sortCoins(sort: SortOption, coins: inout [Coin]) {
         switch sort {
         case .rank, .holdings:
-             coins.sort(by: { $0.rank < $1.rank })
+            coins.sort(by: { $0.rank < $1.rank })
         case .rankReversed, .holdingsReversed:
-             coins.sort(by: { $0.rank > $1.rank })
+            coins.sort(by: { $0.rank > $1.rank })
         case .price:
-             coins.sort(by: { $0.currentPrice > $1.currentPrice })
+            coins.sort(by: { $0.currentPrice > $1.currentPrice })
         case .priceReversed:
-             coins.sort(by: { $0.currentPrice < $1.currentPrice })
+            coins.sort(by: { $0.currentPrice < $1.currentPrice })
         }
     }
     
-//    private func sortCoins(sort: SortOption, coins: [Coin]) -> [Coin] {
-//        switch sort {
-//        case .rank, .holdings:
-//            return coins.sorted { (coin1, coin2) -> Bool in
-//                return coin1.rank < coin2.rank
-//            }
-//        case .rankReversed, .holdingsReversed:
-//            return coins.sorted { (coin1, coin2) -> Bool in
-//                return coin1.rank > coin2.rank
-//            }
-//        case .price:
-//            return coins.sorted { (price1, price2) -> Bool in
-//                return price1.rank > price2.rank
-//            }
-//        case .priceReversed:
-//            return coins.sorted { (price1, price2) -> Bool in
-//                return price1.rank < price2.rank
-//            }
-//        }
-//    }
+    //    private func sortCoins(sort: SortOption, coins: [Coin]) -> [Coin] {
+    //        switch sort {
+    //        case .rank, .holdings:
+    //            return coins.sorted { (coin1, coin2) -> Bool in
+    //                return coin1.rank < coin2.rank
+    //            }
+    //        case .rankReversed, .holdingsReversed:
+    //            return coins.sorted { (coin1, coin2) -> Bool in
+    //                return coin1.rank > coin2.rank
+    //            }
+    //        case .price:
+    //            return coins.sorted { (price1, price2) -> Bool in
+    //                return price1.rank > price2.rank
+    //            }
+    //        case .priceReversed:
+    //            return coins.sorted { (price1, price2) -> Bool in
+    //                return price1.rank < price2.rank
+    //            }
+    //        }
+    //    }
     
     private func sortPortfolioCoinsIfNeeded(coins: [Coin]) -> [Coin] {
         // will only sort by holdings or reversed holdings if needed
@@ -197,7 +195,5 @@ class HomeViewModel: ObservableObject {
             portfolio
         ])
         return stats
-        
     }
-    
 }

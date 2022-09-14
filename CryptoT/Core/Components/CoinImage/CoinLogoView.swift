@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CoinLogoView: View {
-    
     let coin: Coin
     
     var body: some View {
@@ -26,7 +25,6 @@ struct CoinLogoView: View {
                 .lineLimit(2)
                 .minimumScaleFactor(0.5)
                 .multilineTextAlignment(.center)
-            
         }
     }
 }

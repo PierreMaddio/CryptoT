@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 class CoinDataService {
-    
     @Published var allCoins: [Coin] = []
     var coinSubscription: AnyCancellable?
     

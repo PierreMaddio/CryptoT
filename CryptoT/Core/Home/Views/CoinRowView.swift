@@ -21,6 +21,9 @@ struct CoinRowView: View {
             rightColumn
         }
         .font(.subheadline)
+        .background(
+            Color.theme.background.opacity(0.001)
+        )
     }
 }
 
@@ -38,7 +41,6 @@ struct CoinRowView_Previews: PreviewProvider {
 }
 
 extension CoinRowView {
-    
     private var leftColumn: some View {
         HStack(spacing: 0) {
             Text("\(coin.rank)")

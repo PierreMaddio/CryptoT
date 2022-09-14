@@ -34,7 +34,6 @@ extension Double {
         return currencyFormatter2.string(from: number) ?? "$0.00"
     }
 
-    
     /// Converts a Double into a Currency with 2-6 decimal places
     /// ```
     /// Convert 1234.56 to $1,234.56
@@ -80,7 +79,6 @@ extension Double {
         return asNumberString() + "%"
     }
     
-    
     /// Convert a Double to a String with K, M, Bn, Tr abbreviations.
     /// ```
     /// Convert 12 to 12.00
@@ -119,5 +117,4 @@ extension Double {
             return "\(sign)\(self)"
         }
     }
-
 }

@@ -25,7 +25,6 @@ class CoinImageViewModel: ObservableObject {
     }
     
     private func addSubscribers() {
-        
         dataService.$image
             .sink { [weak self] (_) in
                 self?.isLoading = false
@@ -33,7 +32,5 @@ class CoinImageViewModel: ObservableObject {
                 self?.image = returnedImage
             }
             .store(in: &cancellables)
-
-        
     }
 }
