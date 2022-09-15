@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FA21FEC028C20107000E4FF5 /* CryptoTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FEBF28C20107000E4FF5 /* CryptoTApp.swift */; };
-		FA21FEC228C20107000E4FF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FEC128C20107000E4FF5 /* ContentView.swift */; };
 		FA21FEC428C2010B000E4FF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA21FEC328C2010B000E4FF5 /* Assets.xcassets */; };
 		FA21FEC728C2010B000E4FF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA21FEC628C2010B000E4FF5 /* Preview Assets.xcassets */; };
 		FA21FED128C2010B000E4FF5 /* CryptoTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FED028C2010B000E4FF5 /* CryptoTTests.swift */; };
@@ -73,7 +72,6 @@
 /* Begin PBXFileReference section */
 		FA21FEBC28C20107000E4FF5 /* CryptoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA21FEBF28C20107000E4FF5 /* CryptoTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTApp.swift; sourceTree = "<group>"; };
-		FA21FEC128C20107000E4FF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA21FEC328C2010B000E4FF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA21FEC628C2010B000E4FF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA21FECC28C2010B000E4FF5 /* CryptoTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +172,6 @@
 				FAFD90EF28CC82D00061357F /* Services */,
 				FAFD90E628CB86440061357F /* Model */,
 				FAFD90D828CB2B7D0061357F /* Core */,
-				FA21FEC128C20107000E4FF5 /* ContentView.swift */,
 				FA21FEC328C2010B000E4FF5 /* Assets.xcassets */,
 				FA21FEC528C2010B000E4FF5 /* Preview Content */,
 			);
@@ -515,7 +512,6 @@
 			files = (
 				FAFB5C6B28D0DF7100E6618E /* PortfolioContainer.xcdatamodeld in Sources */,
 				FAFD90F128CC83360061357F /* CoinDataService.swift in Sources */,
-				FA21FEC228C20107000E4FF5 /* ContentView.swift in Sources */,
 				FA8497F328D2428600EE5423 /* ChartView.swift in Sources */,
 				FAFD90EE28CB988E0061357F /* HomeViewModel.swift in Sources */,
 				FAFB5C6628D0B95D00E6618E /* XMarkButton.swift in Sources */,

@@ -24,6 +24,8 @@ struct CryptoTApp: App {
                 HomeView()
                     .navigationBarHidden(true)
             }
+            // navigationViewStyle force the ipad to have the save style to the iphone
+            .navigationViewStyle(StackNavigationViewStyle())
             .environmentObject(vm)
         }
     }
