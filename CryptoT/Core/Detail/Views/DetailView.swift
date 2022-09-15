@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DetailLoadingView: View {
-    
     @Binding var coin: Coin?
     
     var body: some View {
@@ -21,7 +20,6 @@ struct DetailLoadingView: View {
 }
 
 struct DetailView: View {
-    
     @StateObject private var vm: DetailViewModel
     @State private var showFullDescription: Bool = false
     
@@ -37,7 +35,6 @@ struct DetailView: View {
     
     var body: some View {
         ScrollView {
-            
             VStack {
                 ChartView(coin: vm.coin)
                     .padding(.vertical)
@@ -55,6 +52,10 @@ struct DetailView: View {
                 .padding()
             }
         }
+        .background(
+            Color.theme.background
+                .ignoresSafeArea()
+        )
         .navigationTitle(vm.coin.name)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

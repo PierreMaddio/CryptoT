@@ -221,7 +221,6 @@
 			children = (
 				FA8497E828D1F59300EE5423 /* ViewModels */,
 				FA8497E928D1F5A200EE5423 /* Views */,
-				FA8497F828D307A600EE5423 /* Settings */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -281,6 +280,7 @@
 				FAFD90DE28CB2DCB0061357F /* Components */,
 				FA8497FC28D3213F00EE5423 /* Launch */,
 				FAFD90D928CB2B9B0061357F /* Home */,
+				FA8497F828D307A600EE5423 /* Settings */,
 				FA8497E728D1F53900EE5423 /* Detail */,
 			);
 			path = Core;
