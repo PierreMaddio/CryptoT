@@ -23,7 +23,8 @@ class MarketDataService {
         ) else { return }
         
         marketDataSubscription = NetworkingManager.download(url: url)
-            .decode(type: GlobalData.self, decoder: JSONDecoder())
+            .decode(type: GlobalData.self, decoder: JSONDecoder()) // background thread to decode
+            .receive(on: DispatchQueue.main) // back to main thread before sink
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedGlobalData) in
                 self?.marketData = returnedGlobalData.data
                 self?.marketDataSubscription?.cancel()

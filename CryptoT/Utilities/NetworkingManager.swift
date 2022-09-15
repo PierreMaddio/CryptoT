@@ -21,13 +21,15 @@ class NetworkingManager {
             }
         }
     }
-    
+    /// func download
+    /// creating a dataTaskPublisher
+    /// and automatically going on to a background thread,
+    /// handle the response using func handleURLResponse,
+    /// mapping the response making sure we have good data,
+    /// and returning as any publisher
     static func download(url: URL) -> AnyPublisher<Data, Error> {
         return URLSession.shared.dataTaskPublisher(for: url)
-        // background thread
-            .subscribe(on: DispatchQueue.global(qos: .default))
             .tryMap({ try handleURLResponse(output: $0, url: url) })
-            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
     
