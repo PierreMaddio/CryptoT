@@ -11,6 +11,7 @@ import SwiftUI
 struct CryptoTApp: App {
     // anything in the HomeView has access to the HomeViewModel
     @StateObject private var vm = HomeViewModel()
+    @State private var showLaunchView: Bool = true
     
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor(Color.theme.accent)]
