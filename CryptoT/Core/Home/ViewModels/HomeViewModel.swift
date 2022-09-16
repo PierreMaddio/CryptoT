@@ -7,14 +7,16 @@
 
 import Foundation
 import Combine
-/*
- ObservableObject: observed it from our view
- Our view has a reference to this HomeViewModel, this viewModel has a dataService witch initialise a CoinDataService(init getCoins), this getCoins func go to the url, download the data, check if it is valid data, decode that data and then take that data and append to allCoins array.Because allCoins is @Published, in HomeViewModel(init addSubscribers), func addSubscribers subscribing that $allCoins array(Published variable), then append to our allCoins array of HomeViewModel(same name allCoins)
- */
+
+/// HomeView has a reference to this HomeViewModel.
+/// @ObservableObject: observed it from our view.
+/// This viewModel have some dataServices witch initialise a CoinDataService(init getCoins) and
+/// a MarketDataService(init getData) witch take the data automatically (init getData),
+/// For example the allCoins in our viewModel is going to subscribe to the publisher in our dataService(same name allCoins),
+/// so anytime when append to the array of allCoins in the CoinDataService, because is a publisher, anything  that is subscribed to this publisher would then get updated.
 class HomeViewModel: ObservableObject {
-    // anything subscribed to the this publisher will then receive that new value
+    // anything subscribed to the this publisher will then get updated
     @Published var statistics: [Statistic] = []
-    
     @Published var allCoins: [Coin] = []
     @Published var portfolioCoins: [Coin] = []
     @Published var isLoading: Bool = false
