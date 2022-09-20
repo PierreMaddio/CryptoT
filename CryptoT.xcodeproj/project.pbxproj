@@ -14,6 +14,7 @@
 		FA21FEDB28C2010B000E4FF5 /* CryptoTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FEDA28C2010B000E4FF5 /* CryptoTUITests.swift */; };
 		FA21FEDD28C2010B000E4FF5 /* CryptoTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FEDC28C2010B000E4FF5 /* CryptoTUITestsLaunchTests.swift */; };
 		FA21FEEB28C25A57000E4FF5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21FEEA28C25A57000E4FF5 /* Color.swift */; };
+		FA2264C828D99FF0000C9C38 /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2264C728D99FF0000C9C38 /* ObservableValue.swift */; };
 		FA8497E628D1BCB000EE5423 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8497E528D1BCAF00EE5423 /* HapticManager.swift */; };
 		FA8497EB28D1F5D800EE5423 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8497EA28D1F5D800EE5423 /* DetailView.swift */; };
 		FA8497ED28D2151900EE5423 /* CoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8497EC28D2151900EE5423 /* CoinDetail.swift */; };
@@ -80,6 +81,7 @@
 		FA21FEDA28C2010B000E4FF5 /* CryptoTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTUITests.swift; sourceTree = "<group>"; };
 		FA21FEDC28C2010B000E4FF5 /* CryptoTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA21FEEA28C25A57000E4FF5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FA2264C728D99FF0000C9C38 /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
 		FA8497E528D1BCAF00EE5423 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		FA8497EA28D1F5D800EE5423 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FA8497EC28D2151900EE5423 /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
@@ -189,6 +191,8 @@
 		FA21FECF28C2010B000E4FF5 /* CryptoTTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA2264CA28D9A3C9000C9C38 /* DetailViewModelTests */,
+				FA2264C928D9A386000C9C38 /* HomeViewModelTests */,
 				FA21FED028C2010B000E4FF5 /* CryptoTTests.swift */,
 			);
 			path = CryptoTTests;
@@ -214,6 +218,20 @@
 				FA8497F628D2FE9B00EE5423 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA2264C928D9A386000C9C38 /* HomeViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeViewModelTests;
+			sourceTree = "<group>";
+		};
+		FA2264CA28D9A3C9000C9C38 /* DetailViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailViewModelTests;
 			sourceTree = "<group>";
 		};
 		FA8497E728D1F53900EE5423 /* Detail */ = {
@@ -365,6 +383,7 @@
 				FAFD914728CDCADB0061357F /* NetworkingManager.swift */,
 				FAFD915928CF62D50061357F /* LocalFileManager.swift */,
 				FA8497E528D1BCAF00EE5423 /* HapticManager.swift */,
+				FA2264C728D99FF0000C9C38 /* ObservableValue.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -546,6 +565,7 @@
 				FA8497F128D21B2600EE5423 /* CoinDetailDataService.swift in Sources */,
 				FA8497EF28D21AE700EE5423 /* DetailViewModel.swift in Sources */,
 				FAFB5C6D28D0E05700E6618E /* PortfolioDataService.swift in Sources */,
+				FA2264C828D99FF0000C9C38 /* ObservableValue.swift in Sources */,
 				FA8497FB28D3083000EE5423 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,10 +731,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -742,10 +760,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

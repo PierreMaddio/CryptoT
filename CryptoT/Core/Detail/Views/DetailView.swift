@@ -13,7 +13,9 @@ struct DetailLoadingView: View {
     var body: some View {
         ZStack {
             if let coin = coin {
-                DetailView(coin: coin)
+                let coinDetailService = CoinDetailDataService(coin: coin)
+                let viewModel = DetailViewModel(coin: coin, coinDetailService: coinDetailService)
+                DetailView(coin: coin, vm: viewModel)
             }
         }
     }
@@ -29,8 +31,8 @@ struct DetailView: View {
     ]
     private let spacing: CGFloat = 30
     
-    init(coin: Coin) {
-        _vm = StateObject(wrappedValue: DetailViewModel(coin: coin))
+    init(coin: Coin, vm: DetailViewModel) {
+        _vm = StateObject(wrappedValue: vm)
     }
     
     var body: some View {
@@ -68,7 +70,9 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(coin: dev.coin)
+            let coinDetailService = CoinDetailDataService(coin: dev.coin)
+            let viewModel = DetailViewModel(coin: dev.coin, coinDetailService: coinDetailService)
+            DetailView(coin: dev.coin, vm: viewModel)
         }
     }
 }
