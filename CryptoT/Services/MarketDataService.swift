@@ -34,7 +34,7 @@ class MarketDataService: MarketDataServiceProtocol {
                 }
                 return output.data
             }
-            .decode(type: MarketData.self, decoder: JSONDecoder())
+            .decode(type: GlobalData.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink { (completion) in
                 switch completion {
@@ -44,7 +44,7 @@ class MarketDataService: MarketDataServiceProtocol {
                     print(error.localizedDescription)
                 }
             } receiveValue: { [weak self] (returnedGlobalData) in
-                self?.marketData.value = returnedGlobalData
+                self?.marketData.value = returnedGlobalData.data
                 self?.marketDataSubscription?.cancel()
             }
     }
