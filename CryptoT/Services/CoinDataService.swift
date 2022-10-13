@@ -8,49 +8,8 @@
 import Foundation
 import Combine
 
-protocol CoinDataServiceProtocol {
-    func getCoins()
-    var allCoins: ObservableValue<[Coin]> { get set }
-}
-
-class CoinDataService: CoinDataServiceProtocol {
-    var allCoins: ObservableValue<[Coin]> = .init([])
-    var coinSubscription: AnyCancellable?
-    
-    init() {
-        getCoins()
-    }
-    
-    func getCoins() {
-        guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h") else { return }
-        
-        coinSubscription = URLSession.shared.dataTaskPublisher(for: url)
-            .tryMap { (output) -> Data in
-                guard let response = output.response as? HTTPURLResponse,
-                      response.statusCode >= 200 && response.statusCode < 300 else {
-                    throw URLError(.badServerResponse)
-                }
-                return output.data
-            }
-            .decode(type: [Coin].self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
-            .sink { (completion) in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            } receiveValue: { [weak self] (returnedCoins) in
-                self?.allCoins.value = returnedCoins
-                self?.coinSubscription?.cancel()
-            }
-    }
-}
-
-/*
-class CoinDataService: CoinDataServiceProtocol {
-    var allCoins: ObservableValue<[Coin]> = .init([])
+class CoinDataService {
+    @Published var allCoins: [Coin] = []
     var coinSubscription: AnyCancellable?
     
     init() {
@@ -70,9 +29,9 @@ class CoinDataService: CoinDataServiceProtocol {
             .decode(type: [Coin].self, decoder: JSONDecoder()) // background thread to decode(download)
             .receive(on: DispatchQueue.main) // back to main thread before sink
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedCoins) in
-                self?.allCoins.value = returnedCoins
+                self?.allCoins = returnedCoins
                 self?.coinSubscription?.cancel()
             })
     }
 }
-*/
+

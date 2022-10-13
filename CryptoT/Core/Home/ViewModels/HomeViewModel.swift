@@ -25,8 +25,8 @@ class HomeViewModel: ObservableObject {
     @Published var sortOption: SortOption = .holdings
     
     // dataService initialize CoinDataService(), with init() get the coin automatically
-    private let coinDataService: CoinDataServiceProtocol
-    private let marketDataService: MarketDataServiceProtocol
+    private let coinDataService = CoinDataService()
+    private let marketDataService = MarketDataService()
     private let portfolioDataService = PortfolioDataService()
     private var cancellables = Set<AnyCancellable>()
     
@@ -34,16 +34,14 @@ class HomeViewModel: ObservableObject {
         case rank, rankReversed, holdings, holdingsReversed, price, priceReversed
     }
     
-    init(marketDataService: MarketDataServiceProtocol = MarketDataService(), coinDataService: CoinDataServiceProtocol = CoinDataService()) {
-        self.marketDataService = marketDataService
-        self.coinDataService = coinDataService
+    init() {
         addSubscribers()
     }
     
     func addSubscribers() {
         // updates allCoins
         $searchText
-            .combineLatest(coinDataService.allCoins.$value, $sortOption)
+            .combineLatest(coinDataService.$allCoins, $sortOption)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
             .map(filterAndSortCoins)
             .sink { [weak self] (returnedCoins) in
@@ -62,7 +60,7 @@ class HomeViewModel: ObservableObject {
             .store(in: &cancellables)
         
         // updates marketData
-        marketDataService.marketData.$value
+        marketDataService.$marketData
             .combineLatest($portfolioCoins)
             .map(markGlobalMarketData)
             .sink { [weak self] (returnedStats) in

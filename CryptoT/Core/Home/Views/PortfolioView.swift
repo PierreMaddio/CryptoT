@@ -127,7 +127,7 @@ extension PortfolioView {
                 Text(getCurrentValue().asCurrencyWith2Decimals())
             }
         }
-        .animation(.none)
+        .animation(.none, value: true)
         .padding()
         .font(.headline)
     }

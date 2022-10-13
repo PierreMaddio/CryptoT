@@ -25,6 +25,10 @@
 		FA8497F728D2FE9B00EE5423 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8497F628D2FE9B00EE5423 /* String.swift */; };
 		FA8497FB28D3083000EE5423 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8497FA28D3083000EE5423 /* SettingsView.swift */; };
 		FA8497FF28D3219900EE5423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8497FE28D3219900EE5423 /* LaunchScreen.storyboard */; };
+		FAF4320528E18F6500091911 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4320428E18F6500091911 /* MockURLProtocol.swift */; };
+		FAF4320728E18FBB00091911 /* CoinDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4320628E18FBB00091911 /* CoinDataServiceTests.swift */; };
+		FAF4320928E1AC1800091911 /* MockCoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4320828E1AC1800091911 /* MockCoinDataService.swift */; };
+		FAF4320B28E1AC5700091911 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4320A28E1AC5700091911 /* HomeViewModelTests.swift */; };
 		FAFB5C5A28D06A4100E6618E /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB5C5928D06A4100E6618E /* Statistic.swift */; };
 		FAFB5C5C28D06BEB00E6618E /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB5C5B28D06BEB00E6618E /* StatisticView.swift */; };
 		FAFB5C5E28D070C400E6618E /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB5C5D28D070C400E6618E /* HomeStatsView.swift */; };
@@ -92,6 +96,10 @@
 		FA8497F628D2FE9B00EE5423 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		FA8497FA28D3083000EE5423 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FA8497FE28D3219900EE5423 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAF4320428E18F6500091911 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		FAF4320628E18FBB00091911 /* CoinDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataServiceTests.swift; sourceTree = "<group>"; };
+		FAF4320828E1AC1800091911 /* MockCoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoinDataService.swift; sourceTree = "<group>"; };
+		FAF4320A28E1AC5700091911 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		FAFB5C5928D06A4100E6618E /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		FAFB5C5B28D06BEB00E6618E /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		FAFB5C5D28D070C400E6618E /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
@@ -191,8 +199,9 @@
 		FA21FECF28C2010B000E4FF5 /* CryptoTTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA2264CA28D9A3C9000C9C38 /* DetailViewModelTests */,
+				FAF4320328E18F4600091911 /* ServiceTests */,
 				FA2264C928D9A386000C9C38 /* HomeViewModelTests */,
+				FA2264CA28D9A3C9000C9C38 /* DetailViewModelTests */,
 				FA21FED028C2010B000E4FF5 /* CryptoTTests.swift */,
 			);
 			path = CryptoTTests;
@@ -223,6 +232,8 @@
 		FA2264C928D9A386000C9C38 /* HomeViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAF4320828E1AC1800091911 /* MockCoinDataService.swift */,
+				FAF4320A28E1AC5700091911 /* HomeViewModelTests.swift */,
 			);
 			path = HomeViewModelTests;
 			sourceTree = "<group>";
@@ -290,6 +301,15 @@
 				FA8497FE28D3219900EE5423 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FAF4320328E18F4600091911 /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4320428E18F6500091911 /* MockURLProtocol.swift */,
+				FAF4320628E18FBB00091911 /* CoinDataServiceTests.swift */,
+			);
+			path = ServiceTests;
 			sourceTree = "<group>";
 		};
 		FAFD90D828CB2B7D0061357F /* Core */ = {
@@ -574,7 +594,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF4320B28E1AC5700091911 /* HomeViewModelTests.swift in Sources */,
+				FAF4320728E18FBB00091911 /* CoinDataServiceTests.swift in Sources */,
 				FA21FED128C2010B000E4FF5 /* CryptoTTests.swift in Sources */,
+				FAF4320928E1AC1800091911 /* MockCoinDataService.swift in Sources */,
+				FAF4320528E18F6500091911 /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

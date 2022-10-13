@@ -14,7 +14,7 @@ struct DetailLoadingView: View {
         ZStack {
             if let coin = coin {
                 let coinDetailService = CoinDetailDataService(coin: coin)
-                let viewModel = DetailViewModel(coin: coin, coinDetailService: coinDetailService)
+                let viewModel = DetailViewModel(coin: coin)
                 DetailView(coin: coin, vm: viewModel)
             }
         }
@@ -71,7 +71,7 @@ struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             let coinDetailService = CoinDetailDataService(coin: dev.coin)
-            let viewModel = DetailViewModel(coin: dev.coin, coinDetailService: coinDetailService)
+            let viewModel = DetailViewModel(coin: dev.coin)
             DetailView(coin: dev.coin, vm: viewModel)
         }
     }
